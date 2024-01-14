@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome </title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" />
+  </head>
+  <body> 
+    <div class="container d-flex justify-content-between mt-4">
+      <div class="head d-flex flex-column gap-2">
+        <h1>Success! Welcome,{{request.session.first_name}} !</h1>
+        <p class="text-success"> Successfully {{type}}</p>
+      </div>
+      <a style="text-decoration: underline;" href="/logout" class="text-primary"> LOG OUT </a>
+    </div>
+    <script src="{% static 'bootstrap.bundle.min.js' %}"></script>
+ </body>
+</html
